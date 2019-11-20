@@ -18,6 +18,7 @@ let hasMenus = false;
 router.beforeEach(async (to, from, next) => {
   LoadingBar.start();
   if (localStorage.getItem("token")) {
+    console.log(111, to.path);
     if (to.path === "/login") {
       next({ path: "/" });
     } else {
@@ -30,6 +31,7 @@ router.beforeEach(async (to, from, next) => {
           // const routes = menusToRoutes(data)
 
           const routes = menusToRoutes(store.state.index.menuItems);
+          console.log("routes", routes);
           //   // 动态添加路由
           router.addRoutes(routes);
           hasMenus = true;

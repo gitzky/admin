@@ -12,7 +12,7 @@ export default {
         text: "主页" // 文本内容
       },
       {
-        name: "t1",
+        name: "user",
         size: 18,
         text: "用户",
         type: "ios-people",
@@ -20,7 +20,7 @@ export default {
       },
 
       {
-        name: "postlist",
+        name: "post",
         size: 18,
         text: "文章",
         type: "ios-book-outline",

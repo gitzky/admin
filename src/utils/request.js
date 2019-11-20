@@ -1,22 +1,14 @@
 import axios from "axios";
 
 // 创建axios实例
-console.log(process.env);
 const service = axios.create({
   baseURL: "/", // api的base_url
-  //   baseURL: process.env.ADMIN_SERVER, // api的base_url
   timeout: 5000, // 请求超时时间
   withCredentials: true, //跨域
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json"
-  },
-  transformRequest: [
-    function(data) {
-      let req = JSON.stringify(data);
-      return req;
-    }
-  ]
+  }
 });
 
 service.interceptors.response.use(

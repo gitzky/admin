@@ -19,15 +19,15 @@ export const asyncRoutes = {
     name: "home",
     component: () => import("../views/Home.vue")
   },
-  t1: {
-    path: "t1",
-    name: "t1",
-    component: () => import("../views/T1.vue")
+  user: {
+    path: "user",
+    name: "user",
+    component: () => import("../views/User.vue")
   },
-  postlist: {
+  post: {
     path: "post",
-    name: "postlist",
-    component: () => import("../views/T1.vue")
+    name: "post",
+    component: () => import("../views/Post.vue")
   },
   password: {
     path: "password",
